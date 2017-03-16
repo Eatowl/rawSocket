@@ -67,7 +67,7 @@ int main() {
 	ip->iph_len = sizeof(struct ipheader) + sizeof(struct udpheader);
 	ip->iph_ident = htons(54321);
 	ip->iph_ttl = 64;
-	ip->iph_protocol = 17;
+	ip->iph_protocol = IPPROTO_UDP;
 	ip->iph_sourceip = inet_addr("127.0.0.3");
 	ip->iph_destip = inet_addr("127.0.0.1");
 
